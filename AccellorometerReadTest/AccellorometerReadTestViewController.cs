@@ -7,6 +7,8 @@ using MonoTouch.CoreMotion;
 namespace AccellorometerReadTest
 {
 	public partial class AccellorometerReadTestViewController : UIViewController
+
+		private CMMotionManager _motionManager;
 	{
 		public AccellorometerReadTestViewController () : base ("AccellorometerReadTestViewController", null)
 		{
@@ -37,9 +39,7 @@ namespace AccellorometerReadTest
 			currentMaxRotY = 0;
 			currentMaxRotZ = 0;
 
-			CMMotionManager _motionManager = new CMMotionManager ();
-
-
+			_motionManager = new CMMotionManager ();
 			_motionManager.StartAccelerometerUpdates (NSOperationQueue.CurrentQueue, (data,error) =>
 			{
 				this.accX.Text = data.Acceleration.X.ToString();
@@ -51,7 +51,12 @@ namespace AccellorometerReadTest
 
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
+		public override void ViewDidUnload()
+		{
+			base.ViewDidUnload();
 
+			ReleaseDesignerOutlets();
+		}
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
 		{
 			// Return true for supported orientations
