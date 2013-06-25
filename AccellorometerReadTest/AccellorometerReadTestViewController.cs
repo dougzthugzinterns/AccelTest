@@ -19,7 +19,10 @@ namespace AccellorometerReadTest
 
 		partial void resetMaxValues (NSObject sender)
 		{
-			maxAccX.Text = currentMaxAccelX.ToString();
+			currentMaxAccelX = 0;
+			currentMaxAccelY = 0;
+			currentMaxAccelZ = 0;
+			currentMaxAvgAccel = 0;
 		}
 
 		public override void DidReceiveMemoryWarning ()
