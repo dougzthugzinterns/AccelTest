@@ -8,8 +8,11 @@ namespace AccellorometerReadTest
 {
 	public partial class AccellorometerReadTestViewController : UIViewController
 
-		private CMMotionManager _motionManager;
+
 	{
+
+		private CMMotionManager _motionManager;
+		int gravity;
 		public AccellorometerReadTestViewController () : base ("AccellorometerReadTestViewController", null)
 		{
 		}
@@ -42,9 +45,14 @@ namespace AccellorometerReadTest
 			_motionManager = new CMMotionManager ();
 			_motionManager.StartAccelerometerUpdates (NSOperationQueue.CurrentQueue, (data,error) =>
 			{
-				this.accX.Text = data.Acceleration.X.ToString();
-				this.accY.Text = data.Acceleration.Y.ToString();
-				this.accZ.Text = data.Acceleration.Z.ToString();
+				this.accX.Text = data.Acceleration.X.ToString("0.0000");
+				this.accY.Text = data.Acceleration.Y.ToString("0.0000");
+				this.accZ.Text = data.Acceleration.Z.ToString("0.0000");
+
+				this.maxAccX.Text = Math.Sqrt ((data.Acceleration.X * data.Acceleration.X) + 
+				                               (data.Acceleration.Y * data.Acceleration.Y) +
+				                               (data.Acceleration.Z * data.Acceleration.Z)).ToString("0.0000");
+			
 
 			});
 
