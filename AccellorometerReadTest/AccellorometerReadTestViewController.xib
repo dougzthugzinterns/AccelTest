@@ -337,6 +337,7 @@
 						<reference key="IBUITextColor" ref="250386742"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
+						<int key="IBUITextAlignment">2</int>
 						<reference key="IBUIFontDescription" ref="678585642"/>
 						<reference key="IBUIFont" ref="448306620"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -358,6 +359,7 @@
 						<reference key="IBUITextColor" ref="250386742"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
+						<int key="IBUITextAlignment">2</int>
 						<reference key="IBUIFontDescription" ref="678585642"/>
 						<reference key="IBUIFont" ref="448306620"/>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -822,8 +824,6 @@
 							<reference ref="323263798"/>
 							<reference ref="640258143"/>
 							<reference ref="371216197"/>
-							<reference ref="101120915"/>
-							<reference ref="337494414"/>
 							<reference ref="884089768"/>
 							<reference ref="545282854"/>
 							<reference ref="54335923"/>
@@ -835,6 +835,8 @@
 							<reference ref="882114908"/>
 							<reference ref="173515303"/>
 							<reference ref="389350984"/>
+							<reference ref="101120915"/>
+							<reference ref="337494414"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

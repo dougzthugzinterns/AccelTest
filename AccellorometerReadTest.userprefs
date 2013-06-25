@@ -1,18 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AccellorometerReadTest/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AccellorometerReadTest/AccellorometerReadTestViewController.cs">
     <Files>
       <File FileName="AccellorometerReadTest/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="AccellorometerReadTest/AccellorometerReadTestViewController.designer.cs" Line="21" Column="3" />
-      <File FileName="AccellorometerReadTest/AccellorometerReadTestViewController.cs" Line="21" Column="4" />
-      <File FileName="AccellorometerReadTest/Main.cs" Line="16" Column="1" />
+      <File FileName="AccellorometerReadTest/AccellorometerReadTestViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="AccellorometerReadTest/AccellorometerReadTestViewController.cs" Line="30" Column="24" />
+      <File FileName="AccellorometerReadTest/Main.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="AccellorometerReadTest" expanded="True">
             <Node name="AccellorometerReadTestViewController.cs" expanded="True" />
-            <Node name="AppDelegate.cs" selected="True" />
+            <Node name="AccellorometerReadTestViewController.xib" selected="True" />
           </Node>
         </State>
       </Pad>
