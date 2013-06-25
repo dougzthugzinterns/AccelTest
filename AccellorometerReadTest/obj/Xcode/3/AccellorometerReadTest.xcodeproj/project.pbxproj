@@ -1,0 +1,218 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72C7D9900000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD8A3700000000000000000 /* UIKit.framework */; };
+		28C220CC0000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C532D6A0000000000000000 /* MapKit.framework */; };
+		288F3DB00000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C204A4E0000000000000000 /* Foundation.framework */; };
+		1BFA1FF90000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8B2C970000000000000000 /* CoreGraphics.framework */; };
+		5EF7D8900000000000000000 /* AccellorometerReadTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9808A2700000000000000000 /* AccellorometerReadTestViewController.xib */; };
+		94DA70B00000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = CDEB3A900000000000000000 /* AppDelegate.h */; };
+		27523DA00000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE34A3E0000000000000000 /* AppDelegate.m */; };
+		238E4DE60000000000000000 /* AccellorometerReadTestViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 271F5A840000000000000000 /* AccellorometerReadTestViewController.h */; };
+		1FCA5E2C0000000000000000 /* AccellorometerReadTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235B6ACA0000000000000000 /* AccellorometerReadTestViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		33902DE10000000000000000 /* AccellorometerReadTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "AccellorometerReadTest.app"; path = "AccellorometerReadTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD8A3700000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		2C532D6A0000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		2C204A4E0000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		1F8B2C970000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		9808A2700000000000000000 /* AccellorometerReadTestViewController.xib */ = {isa = PBXFileReference; name = "AccellorometerReadTestViewController.xib"; path = "AccellorometerReadTestViewController.xib"; sourceTree = "<group>"; };
+		CDEB3A900000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		2AE34A3E0000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		271F5A840000000000000000 /* AccellorometerReadTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AccellorometerReadTestViewController.h"; path = "AccellorometerReadTestViewController.h"; sourceTree = "<group>"; };
+		235B6ACA0000000000000000 /* AccellorometerReadTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AccellorometerReadTestViewController.m"; path = "AccellorometerReadTestViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2760D6620000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C7D9900000000000000000 /* UIKit.framework in Frameworks */,
+				28C220CC0000000000000000 /* MapKit.framework in Frameworks */,
+				288F3DB00000000000000000 /* Foundation.framework in Frameworks */,
+				1BFA1FF90000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77A47F000000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				3213FC3C0000000000000000 /* AccellorometerReadTest */,
+				122D6DCA0000000000000000 /* Frameworks */,
+				3CC722160000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CC722160000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33902DE10000000000000000 /* AccellorometerReadTest.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		122D6DCA0000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABD8A3700000000000000000 /* UIKit.framework */,
+				2C532D6A0000000000000000 /* MapKit.framework */,
+				2C204A4E0000000000000000 /* Foundation.framework */,
+				1F8B2C970000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		3213FC3C0000000000000000 /* AccellorometerReadTest */ = {
+			isa = PBXGroup;
+			children = (
+				271F5A840000000000000000 /* AccellorometerReadTestViewController.h */,
+				9808A2700000000000000000 /* AccellorometerReadTestViewController.xib */,
+				CDEB3A900000000000000000 /* AppDelegate.h */,
+				2934357D0000000000000000 /* Supporting Files */,
+			);
+			name = "AccellorometerReadTest";
+			sourceTree = "<group>";
+		};
+		2934357D0000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				235B6ACA0000000000000000 /* AccellorometerReadTestViewController.m */,
+				2AE34A3E0000000000000000 /* AppDelegate.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BD56B510000000000000000 /* AccellorometerReadTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28DD08070000000000000000 /* Build configuration list for PBXNativeTarget "AccellorometerReadTest" */;
+			buildPhases = (
+				158B974C0000000000000000 /* Sources */,
+				2760D6620000000000000000 /* Frameworks */,
+				3E7636D70000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AccellorometerReadTest";
+			productName = "AccellorometerReadTest";
+			productReference = 33902DE10000000000000000 /* AccellorometerReadTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		212245770000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1E29E22D0000000000000000 /* Build configuration list for PBXProject "AccellorometerReadTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 77A47F000000000000000000;
+			productRefGroup = 3CC722160000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BD56B510000000000000000 /* AccellorometerReadTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E7636D70000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF7D8900000000000000000 /* AccellorometerReadTestViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		158B974C0000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DA70B00000000000000000 /* AppDelegate.h in Sources */,
+				27523DA00000000000000000 /* AppDelegate.m in Sources */,
+				238E4DE60000000000000000 /* AccellorometerReadTestViewController.h in Sources */,
+				1FCA5E2C0000000000000000 /* AccellorometerReadTestViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FA613D20000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		1376BC530000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "AccellorometerReadTest";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E29E22D0000000000000000 /* Build configuration list for PBXProject "AccellorometerReadTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FA613D20000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		28DD08070000000000000000 /* Build configuration list for PBXNativeTarget "AccellorometerReadTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1376BC530000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 212245770000000000000000 /* Project object */;
+}
