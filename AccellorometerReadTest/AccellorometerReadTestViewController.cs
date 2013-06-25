@@ -33,14 +33,12 @@ namespace AccellorometerReadTest
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-
+			double avgaccel = 0;
 			currentMaxAccelX = 0;
 			currentMaxAccelY = 0;
 			currentMaxAccelZ = 0;
+			currentMaxAvgAccel = 0;
 
-			currentMaxRotX = 0;
-			currentMaxRotY = 0;
-			currentMaxRotZ = 0;
 
 			_motionManager = new CMMotionManager ();
 			_motionManager.StartDeviceMotionUpdates (NSOperationQueue.CurrentQueue, (data,error) =>
@@ -49,16 +47,25 @@ namespace AccellorometerReadTest
 				this.accY.Text = data.UserAcceleration.Y.ToString("0.0000");
 				this.accZ.Text = data.UserAcceleration.Z.ToString("0.0000");
 
-				this.rotX.Text = data.RotationRate.x.ToString("0.0000");
-				this.rotY.Text = data.RotationRate.y.ToString("0.0000");
-				this.rotZ.Text = data.RotationRate.z.ToString("0.0000");
+				avgaccel = Math.Sqrt ((data.UserAcceleration.X * data.UserAcceleration.X) + 
+				                      (data.UserAcceleration.Y * data.UserAcceleration.Y) +
+				                      (data.UserAcceleration.Z * data.UserAcceleration.Z));
+				this.rotX.Text = avgaccel.ToString("0.0000");
 
-				this.maxRotX.Text = data.Attitude.ToString("0.0000");
+				if(avgaccel > currentMaxAvgAccel)
+					currentMaxAvgAccel = avgaccel;
+				if(data.UserAcceleration.X > currentMaxAccelX)
+					currentMaxAccelX = data.UserAcceleration.X;
+				if(data.UserAcceleration.Y > currentMaxAccelY)
+					currentMaxAccelY = data.UserAcceleration.Y;
+				if(data.UserAcceleration.Z > currentMaxAccelZ)
+					currentMaxAccelZ = data.UserAcceleration.Z;
 
-				this.maxAccX.Text = Math.Sqrt ((data.UserAcceleration.X * data.UserAcceleration.X) + 
-				                               (data.UserAcceleration.Y * data.UserAcceleration.Y) +
-				                               (data.UserAcceleration.Z * data.UserAcceleration.Z)).ToString("0.0000");
-			
+				this.rotY.Text = currentMaxAvgAccel.ToString("0.0000");
+				this.maxAccX.Text = currentMaxAccelX.ToString("0.0000");
+				this.maxAccY.Text = currentMaxAccelY.ToString("0.0000");
+				this.maxAccZ.Text = currentMaxAccelZ.ToString("0.0000");
+
 
 			});
 

@@ -3,16 +3,15 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="AccellorometerReadTest/AccellorometerReadTestViewController.cs">
     <Files>
       <File FileName="AccellorometerReadTest/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="AccellorometerReadTest/AccellorometerReadTestViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="AccellorometerReadTest/AccellorometerReadTestViewController.cs" Line="56" Column="58" />
+      <File FileName="AccellorometerReadTest/AccellorometerReadTestViewController.designer.cs" Line="18" Column="29" />
+      <File FileName="AccellorometerReadTest/AccellorometerReadTestViewController.cs" Line="67" Column="41" />
       <File FileName="AccellorometerReadTest/Main.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="AccellorometerReadTest" expanded="True">
-            <Node name="AccellorometerReadTestViewController.cs" expanded="True" />
-            <Node name="AccellorometerReadTestViewController.xib" selected="True" />
+            <Node name="AccellorometerReadTestViewController.cs" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>

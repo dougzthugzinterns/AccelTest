@@ -15,9 +15,7 @@ namespace AccellorometerReadTest
 		double currentMaxAccelX;
 		double currentMaxAccelY;
 		double currentMaxAccelZ;
-		double currentMaxRotX;
-		double currentMaxRotY;
-		double currentMaxRotZ;
+		double currentMaxAvgAccel;
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel accX { get; set; }
