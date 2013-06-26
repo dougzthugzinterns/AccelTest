@@ -7,10 +7,13 @@ using MonoTouch.CoreMotion;
 namespace AccellorometerReadTest
 {
 	public partial class AccellorometerReadTestViewController : UIViewController
-
-
 	{
-
+		double currentMaxAccelX;
+		double currentMaxAccelY;
+		double currentMaxAccelZ;
+		double currentMaxAvgAccel;
+		double threshold = .5;
+		int eventcount = 0;
 		private CMMotionManager _motionManager;
 		int gravity;
 		public AccellorometerReadTestViewController () : base ("AccellorometerReadTestViewController", null)
@@ -23,6 +26,7 @@ namespace AccellorometerReadTest
 			currentMaxAccelY = 0;
 			currentMaxAccelZ = 0;
 			currentMaxAvgAccel = 0;
+			eventcount = 0;
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -37,6 +41,7 @@ namespace AccellorometerReadTest
 		{
 			base.ViewDidLoad ();
 			double avgaccel = 0;
+
 			currentMaxAccelX = 0;
 			currentMaxAccelY = 0;
 			currentMaxAccelZ = 0;
@@ -46,6 +51,9 @@ namespace AccellorometerReadTest
 			_motionManager = new CMMotionManager ();
 			_motionManager.StartDeviceMotionUpdates (NSOperationQueue.CurrentQueue, (data,error) =>
 			{
+
+				//UIAccelerationValue lowPassFilteredXAcceleration = (currentXAcceleration * kLowPassFilteringFactor) + (previousLowPassFilteredXAcceleration * (1.0 - kLowPassFilteringFactor));
+
 				this.accX.Text = data.UserAcceleration.X.ToString("0.0000");
 				this.accY.Text = data.UserAcceleration.Y.ToString("0.0000");
 				this.accZ.Text = data.UserAcceleration.Z.ToString("0.0000");
@@ -53,6 +61,11 @@ namespace AccellorometerReadTest
 				avgaccel = Math.Sqrt ((data.UserAcceleration.X * data.UserAcceleration.X) + 
 				                      (data.UserAcceleration.Y * data.UserAcceleration.Y) +
 				                      (data.UserAcceleration.Z * data.UserAcceleration.Z));
+
+				if(avgaccel > threshold){
+					eventcount++;
+					this.eventCounter.Text = eventcount.ToString();
+				}
 				this.rotX.Text = avgaccel.ToString("0.0000");
 
 				if(avgaccel > currentMaxAvgAccel)

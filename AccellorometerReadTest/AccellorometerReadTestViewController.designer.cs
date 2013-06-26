@@ -11,12 +11,6 @@ namespace AccellorometerReadTest
 	[Register ("AccellorometerReadTestViewController")]
 	partial class AccellorometerReadTestViewController
 	{
-
-		double currentMaxAccelX;
-		double currentMaxAccelY;
-		double currentMaxAccelZ;
-		double currentMaxAvgAccel;
-
 		[Outlet]
 		MonoTouch.UIKit.UILabel accX { get; set; }
 
@@ -52,6 +46,9 @@ namespace AccellorometerReadTest
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel maxRotZ { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel eventCounter { get; set; }
 
 		[Action ("resetMaxValues:")]
 		partial void resetMaxValues (MonoTouch.Foundation.NSObject sender);
@@ -116,6 +113,11 @@ namespace AccellorometerReadTest
 			if (maxRotZ != null) {
 				maxRotZ.Dispose ();
 				maxRotZ = null;
+			}
+
+			if (eventCounter != null) {
+				eventCounter.Dispose ();
+				eventCounter = null;
 			}
 		}
 	}
