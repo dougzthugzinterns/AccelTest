@@ -10,6 +10,7 @@ namespace AccellorometerReadTest
 {
 	public partial class AccellorometerReadTestViewController : UIViewController
 	{
+		CLLocationManager myLocMan = null;
 		double currentMaxAccelX;
 		double currentMaxAccelY;
 		double currentMaxAccelZ;
@@ -22,12 +23,15 @@ namespace AccellorometerReadTest
 
 		bool eventInProgress = false;
 		private CMMotionManager _motionManager;
-		int gravity;
 
 		public double getCurrentLatitude(){
 			CLLocationManager myLocMan = new CLLocationManager ();
 			myLocMan.DesiredAccuracy = 10;
+			if(CLLocationManager.LocationServicesEnabled){
+				myLocMan.StartUpdatingLocation ();
+			}
 			double latitude = myLocMan.Location.Coordinate.Latitude;
+			myLocMan.StartUpdatingLocation ();
 			return latitude;
 
 		}
@@ -35,7 +39,11 @@ namespace AccellorometerReadTest
 		public double getCurrentLongitude(){
 			CLLocationManager myLocMan = new CLLocationManager ();
 			myLocMan.DesiredAccuracy = 10;
+			if(CLLocationManager.LocationServicesEnabled){
+				myLocMan.StartUpdatingLocation ();
+			}
 			double longitude = myLocMan.Location.Coordinate.Longitude;
+			myLocMan.StartUpdatingLocation ();
 			return longitude;
 		}
 
@@ -101,6 +109,8 @@ namespace AccellorometerReadTest
 					this.accY.Text = currentCoord.Longitude.ToString();
 
 				}
+
+
 
 
 				this.rotX.Text = avgaccel.ToString("0.0000");
