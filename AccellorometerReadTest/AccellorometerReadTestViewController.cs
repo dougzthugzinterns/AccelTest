@@ -14,6 +14,7 @@ namespace AccellorometerReadTest
 		double currentMaxAvgAccel;
 		double threshold = .5;
 		int eventcount = 0;
+		bool eventInProgress = false;
 		private CMMotionManager _motionManager;
 		int gravity;
 		public AccellorometerReadTestViewController () : base ("AccellorometerReadTestViewController", null)
@@ -63,8 +64,14 @@ namespace AccellorometerReadTest
 				                      (data.UserAcceleration.Z * data.UserAcceleration.Z));
 
 				if(avgaccel > threshold){
+
+					eventInProgress = true;
+				}
+
+				else if((avgaccel < threshold)&&eventInProgress){
 					eventcount++;
 					this.eventCounter.Text = eventcount.ToString();
+					eventInProgress = false;
 				}
 				this.rotX.Text = avgaccel.ToString("0.0000");
 
