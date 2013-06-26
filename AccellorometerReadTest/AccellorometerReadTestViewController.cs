@@ -50,6 +50,7 @@ namespace AccellorometerReadTest
 
 
 			_motionManager = new CMMotionManager ();
+			_motionManager.DeviceMotionUpdateInterval = 50;
 			_motionManager.StartDeviceMotionUpdates (NSOperationQueue.CurrentQueue, (data,error) =>
 			{
 
