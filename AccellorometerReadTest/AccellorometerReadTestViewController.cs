@@ -10,7 +10,6 @@ namespace AccellorometerReadTest
 {
 	public partial class AccellorometerReadTestViewController : UIViewController
 	{
-		CLLocationManager myLocMan = null;
 		double currentMaxAccelX;
 		double currentMaxAccelY;
 		double currentMaxAccelZ;
@@ -58,6 +57,9 @@ namespace AccellorometerReadTest
 			currentMaxAccelZ = 0;
 			currentMaxAvgAccel = 0;
 			eventcount = 0;
+			this.eventCounter.Text = "0";
+			this.accX.Text = "0";
+			this.accY.Text = "0";
 		}
 
 		public override void DidReceiveMemoryWarning ()
