@@ -1,8 +1,10 @@
 using System;
 using System.Drawing;
+using System.Collections;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.CoreMotion;
+using MonoTouch.CoreLocation;
 
 namespace AccellorometerReadTest
 {
@@ -14,6 +16,10 @@ namespace AccellorometerReadTest
 		double currentMaxAvgAccel;
 		double threshold = .5;
 		int eventcount = 0;
+		CLLocationCoordinate2D currentCoord = new CLLocationCoordinate2D();
+		ArrayList coordList = new ArrayList();
+		
+
 		bool eventInProgress = false;
 		private CMMotionManager _motionManager;
 		int gravity;
@@ -50,7 +56,7 @@ namespace AccellorometerReadTest
 
 
 			_motionManager = new CMMotionManager ();
-			_motionManager.DeviceMotionUpdateInterval = 50;
+			_motionManager.DeviceMotionUpdateInterval = .5;
 			_motionManager.StartDeviceMotionUpdates (NSOperationQueue.CurrentQueue, (data,error) =>
 			{
 
@@ -65,7 +71,6 @@ namespace AccellorometerReadTest
 				                      (data.UserAcceleration.Z * data.UserAcceleration.Z));
 
 				if(avgaccel > threshold){
-
 					eventInProgress = true;
 				}
 
@@ -73,7 +78,12 @@ namespace AccellorometerReadTest
 					eventcount++;
 					this.eventCounter.Text = eventcount.ToString();
 					eventInProgress = false;
+					currentCoord.Latitude = 0;
+					currentCoord.Longitude = 0;
+					coordList.Add(currentCoord);
 				}
+
+
 				this.rotX.Text = avgaccel.ToString("0.0000");
 
 				if(avgaccel > currentMaxAvgAccel)
