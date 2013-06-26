@@ -23,6 +23,22 @@ namespace AccellorometerReadTest
 		bool eventInProgress = false;
 		private CMMotionManager _motionManager;
 		int gravity;
+
+		public double getCurrentLatitude(){
+			CLLocationManager myLocMan = new CLLocationManager ();
+			myLocMan.DesiredAccuracy = 10;
+			double latitude = myLocMan.Location.Coordinate.Latitude;
+			return latitude;
+
+		}
+		//Gets the Longitude of the user.
+		public double getCurrentLongitude(){
+			CLLocationManager myLocMan = new CLLocationManager ();
+			myLocMan.DesiredAccuracy = 10;
+			double longitude = myLocMan.Location.Coordinate.Longitude;
+			return longitude;
+		}
+
 		public AccellorometerReadTestViewController () : base ("AccellorometerReadTestViewController", null)
 		{
 		}
@@ -62,8 +78,7 @@ namespace AccellorometerReadTest
 
 				//UIAccelerationValue lowPassFilteredXAcceleration = (currentXAcceleration * kLowPassFilteringFactor) + (previousLowPassFilteredXAcceleration * (1.0 - kLowPassFilteringFactor));
 
-				this.accX.Text = data.UserAcceleration.X.ToString("0.0000");
-				this.accY.Text = data.UserAcceleration.Y.ToString("0.0000");
+
 				this.accZ.Text = data.UserAcceleration.Z.ToString("0.0000");
 
 				avgaccel = Math.Sqrt ((data.UserAcceleration.X * data.UserAcceleration.X) + 
@@ -78,9 +93,13 @@ namespace AccellorometerReadTest
 					eventcount++;
 					this.eventCounter.Text = eventcount.ToString();
 					eventInProgress = false;
-					currentCoord.Latitude = 0;
-					currentCoord.Longitude = 0;
+					currentCoord.Latitude = getCurrentLatitude();
+					currentCoord.Longitude = getCurrentLongitude();
 					coordList.Add(currentCoord);
+
+					this.accX.Text = currentCoord.Latitude.ToString();
+					this.accY.Text = currentCoord.Longitude.ToString();
+
 				}
 
 
